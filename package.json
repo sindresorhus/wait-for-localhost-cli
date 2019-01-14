@@ -37,10 +37,10 @@
 		"wait-for-localhost": "^3.0.0"
 	},
 	"devDependencies": {
-		"ava": "*",
-		"create-test-server": "^2.1.1",
-		"delay": "^2.0.0",
-		"execa": "^0.10.0",
-		"xo": "*"
+		"ava": "^1.1.0",
+		"create-test-server": "^2.4.0",
+		"delay": "^4.1.0",
+		"execa": "^1.0.0",
+		"xo": "^0.24.0"
 	}
 }
