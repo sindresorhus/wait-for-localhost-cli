@@ -36,4 +36,3 @@ test('use get method', async t => {
 
 	await server.close();
 });
-
