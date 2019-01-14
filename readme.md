@@ -22,6 +22,9 @@ $ wait-for-localhost --help
   Usage
     $ wait-for-localhost [port]
 
+  Options
+    --use-get  Use the HTTP-method GET instead of HEAD to test if the server is ready
+
   Example
     $ wait-for-localhost 8080 && echo 'Server is ready'
 ```
