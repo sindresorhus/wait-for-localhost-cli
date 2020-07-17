@@ -33,7 +33,7 @@
 		"ready"
 	],
 	"dependencies": {
-		"meow": "^5.0.0",
+		"meow": "^7.0.1",
 		"wait-for-localhost": "^3.0.0"
 	},
 	"devDependencies": {
