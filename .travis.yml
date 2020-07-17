@@ -6,3 +6,12 @@ node_js:
   - '14'
   - '12'
   - '10'
+  - '8'
+jobs:
+  include:
+    - if: env(TRAVIS_NODE_VERSION) != '8'
+      script:
+        - npm test
+    - if: env(TRAVIS_NODE_VERSION) = '8'
+      script:
+        - npm run test:nolint
