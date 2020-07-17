@@ -13,7 +13,7 @@
 		"wait-for-localhost": "cli.js"
 	},
 	"engines": {
-		"node": ">=8.3"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava"
