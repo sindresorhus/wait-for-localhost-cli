@@ -13,7 +13,7 @@
 		"wait-for-localhost": "cli.js"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=8.3"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -37,10 +37,10 @@
 		"wait-for-localhost": "^3.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.1.0",
+		"ava": "^3.10.1",
 		"create-test-server": "^2.4.0",
 		"delay": "^4.1.0",
 		"execa": "^1.0.0",
-		"xo": "^0.24.0"
+		"xo": "^0.32.1"
 	}
 }
