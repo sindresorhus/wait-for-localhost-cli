@@ -16,7 +16,6 @@
 		"node": ">=10"
 	},
 	"scripts": {
-		"test:nolint": "ava",
 		"test": "xo && ava"
 	},
 	"files": [
