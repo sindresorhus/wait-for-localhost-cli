@@ -38,9 +38,9 @@
 	},
 	"devDependencies": {
 		"ava": "^3.10.1",
-		"create-test-server": "^2.4.0",
+		"create-test-server": "3.0.1",
 		"delay": "^4.1.0",
-		"execa": "^1.0.0",
+		"execa": "4.0.3",
 		"xo": "^0.32.1"
 	}
 }
