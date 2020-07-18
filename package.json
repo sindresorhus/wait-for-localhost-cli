@@ -4,10 +4,11 @@
 	"description": "Wait for localhost to be ready from the command-line",
 	"license": "MIT",
 	"repository": "sindresorhus/wait-for-localhost-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"bin": {
 		"wait-for-localhost": "cli.js"
