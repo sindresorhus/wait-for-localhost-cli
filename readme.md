@@ -1,4 +1,4 @@
-# wait-for-localhost-cli [![Build Status](https://travis-ci.com/sindresorhus/wait-for-localhost-cli.svg?branch=master)](https://travis-ci.com/github/sindresorhus/wait-for-localhost-cli)
+# wait-for-localhost-cli
 
 > Wait for localhost to be ready from the command-line
 
