@@ -10,11 +10,12 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
 	"bin": {
-		"wait-for-localhost": "cli.js"
+		"wait-for-localhost": "./cli.js"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -34,14 +35,14 @@
 		"ready"
 	],
 	"dependencies": {
-		"meow": "^7.0.1",
-		"wait-for-localhost": "^3.2.0"
+		"meow": "^10.1.1",
+		"wait-for-localhost": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^3.10.1",
+		"ava": "^3.15.0",
 		"create-test-server": "^3.0.1",
-		"delay": "^4.3.0",
-		"execa": "^4.0.3",
-		"xo": "^0.32.1"
+		"delay": "^5.0.0",
+		"execa": "^5.1.1",
+		"xo": "^0.44.0"
 	}
 }

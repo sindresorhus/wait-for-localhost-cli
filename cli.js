@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const waitForLocalhost = require('wait-for-localhost');
+import process from 'node:process';
+import meow from 'meow';
+import waitForLocalhost from 'wait-for-localhost';
 
 const cli = meow(`
 	Usage
@@ -13,15 +13,16 @@ const cli = meow(`
 	Example
 	  $ wait-for-localhost 8080 && echo 'Server is ready'
 `, {
+	importMeta: import.meta,
 	input: {
 		type: 'number',
-		default: 80
+		default: 80,
 	},
 	flags: {
 		useGet: {
-			type: 'boolean'
-		}
-	}
+			type: 'boolean',
+		},
+	},
 });
 
 const [port] = cli.input;
@@ -30,7 +31,7 @@ const [port] = cli.input;
 	try {
 		await waitForLocalhost({
 			port,
-			...cli.flags
+			...cli.flags,
 		});
 
 		process.exit();

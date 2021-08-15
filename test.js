@@ -1,7 +1,7 @@
-const test = require('ava');
-const execa = require('execa');
-const delay = require('delay');
-const createTestServer = require('create-test-server');
+import test from 'ava';
+import execa from 'execa';
+import delay from 'delay';
+import createTestServer from 'create-test-server';
 
 test('main', async t => {
 	t.plan(2);
