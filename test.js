@@ -36,3 +36,20 @@ test('use get method', async t => {
 
 	await server.close();
 });
+
+test('use path option', async t => {
+	t.plan(2);
+
+	const server = await createTestServer();
+	server.get('/health', async (request, response) => {
+		await delay(1000);
+		response.end();
+		t.pass();
+	});
+
+	await execa('./cli.js', [server.port, '--path', '/health']);
+
+	t.pass();
+
+	await server.close();
+});
