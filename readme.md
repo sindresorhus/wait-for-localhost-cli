@@ -22,7 +22,7 @@ $ wait-for-localhost --help
 
   Options
     --use-get  Use the HTTP-method GET instead of HEAD to test if the server is ready
-	  --path  Use a custom path. For example, /health for a health-check endpoint.
+    --path     Use a custom path. For example, /health for a health-check endpoint.
 
   Example
     $ wait-for-localhost 8080 && echo 'Server is ready'
