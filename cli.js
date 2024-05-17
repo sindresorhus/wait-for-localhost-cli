@@ -8,8 +8,9 @@ const cli = meow(`
 	  $ wait-for-localhost [port]
 
 	Options
-	  --use-get  Use the HTTP-method GET instead of HEAD to test if the server is ready
-	  --path     Use a custom path. For example, /health for a health-check endpoint.
+	  --use-get     Use the HTTP-method GET instead of HEAD to test if the server is ready
+	  --path        Use a custom path. For example, /health for a health-check endpoint.
+	  --statusCode  Define status codes indicating the server is ready. 
 
 	Example
 	  $ wait-for-localhost 8080 && echo 'Server is ready'
@@ -26,6 +27,11 @@ const cli = meow(`
 		path: {
 			type: 'string',
 			default: '/',
+		},
+		statusCode: {
+			type: 'number',
+			default: [200],
+			isMultiple: true,
 		},
 	},
 });

@@ -53,3 +53,37 @@ test('use path option', async t => {
 
 	await server.close();
 });
+
+test('use custom statusCode', async t => {
+	t.plan(2);
+
+	const server = await createTestServer();
+	server.get('/', async (request, response) => {
+		await delay(1000);
+		response.status(201).end();
+		t.pass();
+	});
+
+	await execa('./cli.js', [server.port, '--statusCode', '201']);
+
+	t.pass();
+
+	await server.close();
+});
+
+test('use custom statusCode list', async t => {
+	t.plan(2);
+
+	const server = await createTestServer();
+	server.get('/health', async (request, response) => {
+		await delay(1000);
+		response.status(202).end();
+		t.pass();
+	});
+
+	await execa('./cli.js', [server.port, '--statusCode', '201', '--statusCode', '202']);
+
+	t.pass();
+
+	await server.close();
+});
