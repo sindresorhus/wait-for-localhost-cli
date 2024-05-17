@@ -54,7 +54,7 @@ test('use path option', async t => {
 	await server.close();
 });
 
-test('use custom statusCode', async t => {
+test('use statusCodes option', async t => {
 	t.plan(2);
 
 	const server = await createTestServer();
@@ -64,24 +64,24 @@ test('use custom statusCode', async t => {
 		t.pass();
 	});
 
-	await execa('./cli.js', [server.port, '--statusCode', '201']);
+	await execa('./cli.js', [server.port, '--status-codes', '201']);
 
 	t.pass();
 
 	await server.close();
 });
 
-test('use custom statusCode list', async t => {
+test('use multiple statusCodes options', async t => {
 	t.plan(2);
 
 	const server = await createTestServer();
-	server.get('/health', async (request, response) => {
+	server.get('/', async (request, response) => {
 		await delay(1000);
 		response.status(202).end();
 		t.pass();
 	});
 
-	await execa('./cli.js', [server.port, '--statusCode', '201', '--statusCode', '202']);
+	await execa('./cli.js', [server.port, '--status-codes', '201', '--status-codes', '202']);
 
 	t.pass();
 

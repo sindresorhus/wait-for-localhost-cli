@@ -36,7 +36,7 @@
 	],
 	"dependencies": {
 		"meow": "^10.1.1",
-		"wait-for-localhost": "^4.0.0"
+		"wait-for-localhost": "^4.1.0"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
