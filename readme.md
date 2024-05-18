@@ -21,9 +21,9 @@ $ wait-for-localhost --help
     $ wait-for-localhost [port]
 
   Options
-    --use-get       Use the HTTP-method GET instead of HEAD to test if the server is ready
+    --use-get       Use the HTTP-method GET instead of HEAD to test if the server is ready.
     --path          Use a custom path. For example, /health for a health-check endpoint.
-    --status-codes  Define status codes indicating the server is ready. 
+    --status-codes  Define status codes indicating the server is ready. [Default: 200]
 
   Examples
     $ wait-for-localhost 8080 && echo 'Server is ready'
