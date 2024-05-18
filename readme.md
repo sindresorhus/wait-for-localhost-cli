@@ -8,8 +8,8 @@ I personally use this to wait for [`webpack-dev-server`](https://github.com/webp
 
 ## Install
 
-```
-$ npm install --global wait-for-localhost-cli
+```sh
+npm install --global wait-for-localhost-cli
 ```
 
 ## Usage
@@ -32,5 +32,5 @@ $ wait-for-localhost --help
 
 ## Related
 
-- [wait-for-localhost](https://github.com/sindresorhus/wait-for-localhost) - API for this module
+- [wait-for-localhost](https://github.com/sindresorhus/wait-for-localhost) - API for this package
 - [delay-cli](https://github.com/sindresorhus/delay-cli) - Delay execution for a given amount of seconds
