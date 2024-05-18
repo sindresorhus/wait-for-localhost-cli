@@ -39,7 +39,8 @@ const cli = meow(`
 const [port] = cli.input;
 
 (async () => {
-	cli.flags.statusCodes = cli.flags.statusCodes.split(',').map(it => Number.parseInt(it, 10));
+	cli.flags.statusCodes = cli.flags.statusCodes.split(',').map(statusCode => Number.parseInt(statusCode, 10));
+
 	try {
 		await waitForLocalhost({
 			port,
