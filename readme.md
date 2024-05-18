@@ -25,9 +25,9 @@ $ wait-for-localhost --help
     --path          Use a custom path. For example, /health for a health-check endpoint.
     --status-codes  Define status codes indicating the server is ready. 
 
-  Example
+  Examples
     $ wait-for-localhost 8080 && echo 'Server is ready'
-    $ wait-for-localhost 8080 --status-codes 200 --status-codes 201 && echo 'Server is ready'
+    $ wait-for-localhost 8080 --status-codes 200,201 && echo 'Server is ready'
 ```
 
 ## Related

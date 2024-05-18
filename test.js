@@ -81,7 +81,7 @@ test('use multiple statusCodes options', async t => {
 		t.pass();
 	});
 
-	await execa('./cli.js', [server.port, '--status-codes', '201', '--status-codes', '202']);
+	await execa('./cli.js', [server.port, '--status-codes', '201,202']);
 
 	t.pass();
 

@@ -12,8 +12,9 @@ const cli = meow(`
 	  --path          Use a custom path. For example, /health for a health-check endpoint.
 	  --status-codes  Define status codes indicating the server is ready. 
 
-	Example
+	Examples
 	  $ wait-for-localhost 8080 && echo 'Server is ready'
+	  $ wait-for-localhost 8080 --status-codes 200,201 && echo 'Server is ready'
 `, {
 	importMeta: import.meta,
 	input: {
@@ -29,9 +30,8 @@ const cli = meow(`
 			default: '/',
 		},
 		statusCodes: {
-			type: 'number',
-			default: [200],
-			isMultiple: true,
+			type: 'string',
+			default: '200',
 		},
 	},
 });
@@ -39,6 +39,7 @@ const cli = meow(`
 const [port] = cli.input;
 
 (async () => {
+	cli.flags.statusCodes = cli.flags.statusCodes.split(',').map(it => Number.parseInt(it, 10));
 	try {
 		await waitForLocalhost({
 			port,
