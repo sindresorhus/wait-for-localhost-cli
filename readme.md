@@ -24,10 +24,12 @@ $ wait-for-localhost --help
     --use-get       Use the HTTP-method GET instead of HEAD to test if the server is ready.
     --path          Use a custom path. For example, /health for a health-check endpoint.
     --status-codes  Define status codes indicating the server is ready. [Default: 200]
+    --timeout       Maximum time to wait in milliseconds.
 
   Examples
     $ wait-for-localhost 8080 && echo 'Server is ready'
     $ wait-for-localhost 8080 --status-codes 200,201 && echo 'Server is ready'
+    $ wait-for-localhost 8080 --timeout 5000 && echo 'Server is ready'
 ```
 
 ## Related

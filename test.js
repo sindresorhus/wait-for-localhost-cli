@@ -87,3 +87,20 @@ test('use multiple statusCodes options', async t => {
 
 	await server.close();
 });
+
+test('timeout option', async t => {
+	const server = await createTestServer();
+	server.get('/', async (request, response) => {
+		// Never respond
+		await delay(10_000);
+		response.end();
+	});
+
+	// Should timeout after 1 second
+	await t.throwsAsync(
+		execa('./cli.js', [server.port, '--timeout', '1000']),
+		{message: /aborterror|signal|timeout/i},
+	);
+
+	await server.close();
+});
