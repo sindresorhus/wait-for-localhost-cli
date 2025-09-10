@@ -15,7 +15,7 @@
 		"wait-for-localhost": "./cli.js"
 	},
 	"engines": {
-		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+		"node": ">=20"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -35,14 +35,14 @@
 		"ready"
 	],
 	"dependencies": {
-		"meow": "^10.1.1",
-		"wait-for-localhost": "^4.1.0"
+		"meow": "^13.2.0",
+		"wait-for-localhost": "^5.0.0"
 	},
 	"devDependencies": {
-		"ava": "^3.15.0",
+		"ava": "^6.4.1",
 		"create-test-server": "^3.0.1",
-		"delay": "^5.0.0",
-		"execa": "^5.1.1",
-		"xo": "^0.44.0"
+		"delay": "^6.0.0",
+		"execa": "^9.6.0",
+		"xo": "^1.2.2"
 	}
 }
